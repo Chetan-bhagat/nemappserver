@@ -8,6 +8,9 @@ const app=express();
 const cors=require('cors')
 app.use(cors({origin:true}))
 app.use(express.json())
+app.get("/",(req,res)=>{
+ res.send("WELCOME")
+})
 app.use("/register",registerrouter);
 app.use(access)
 app.use("/users",userrouter);
